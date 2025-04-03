@@ -1,4 +1,6 @@
 auth/
 .idea/
 node_modules\
+*/.env 
+
 
