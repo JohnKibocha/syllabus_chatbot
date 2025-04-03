@@ -24,5 +24,17 @@ app.get('/', (req, res) => {
     res.send('RAG Syllabus Chatbot Backend is running');
 });
 
+// User route
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
+
+// Course route
+const courseRoutes = require('./routes/courseRoutes');
+app.use('/api/courses', courseRoutes);
+
+// Syllabus route
+const syllabusRoutes = require('./routes/syllabusRoutes');
+app.use('/api/syllabus', syllabusRoutes);
+
 // Export app
 module.exports = app;
